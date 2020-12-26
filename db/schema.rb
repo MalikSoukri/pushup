@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_25_171720) do
+ActiveRecord::Schema.define(version: 2020_12_26_210620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,12 @@ ActiveRecord::Schema.define(version: 2020_12_25_171720) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "likes", force: :cascade do |t|
     t.bigint "training_id", null: false
     t.bigint "profile_id", null: false
@@ -43,6 +49,16 @@ ActiveRecord::Schema.define(version: 2020_12_25_171720) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["profile_id"], name: "index_likes_on_profile_id"
     t.index ["training_id"], name: "index_likes_on_training_id"
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.string "name"
+    t.integer "days"
+    t.string "specificity"
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_plans_on_category_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -84,10 +100,22 @@ ActiveRecord::Schema.define(version: 2020_12_25_171720) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "workouts", force: :cascade do |t|
+    t.bigint "plan_id", null: false
+    t.bigint "training_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["plan_id"], name: "index_workouts_on_plan_id"
+    t.index ["training_id"], name: "index_workouts_on_training_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "likes", "profiles"
   add_foreign_key "likes", "trainings"
+  add_foreign_key "plans", "categories"
   add_foreign_key "profiles", "users"
   add_foreign_key "sessions", "profiles"
   add_foreign_key "sessions", "trainings"
+  add_foreign_key "workouts", "plans"
+  add_foreign_key "workouts", "trainings"
 end

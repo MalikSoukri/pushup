@@ -6,17 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
-Profile.destroy_all
-Training.destroy_all
 puts "Destroyed existing"
+Profile.destroy_all
+User.destroy_all
+Workout.destroy_all
+Plan.destroy_all
+Training.destroy_all
+Category.destroy_all
 
+
+puts "Creating profiles"
 User.create!({
   email: "test@email.com",
   password: "123456",
 })
-
-puts "Creating profiles"
 profiles = Profile.create!([{
   name: "Malik",
   age: 28,
@@ -29,16 +32,32 @@ profiles = Profile.create!([{
   }])
   puts "Creating #{Profile.count} profiles"
   
+puts "Creating category"
+categories = Category.create!([{name: "Sweat"},{name: "Flow"}])
 
 puts "Creating trainings"
 trainings = Training.create!([{
-  name: "Vinyassa",
+  name: "Kill it",
   duration: 60,
-  category: "Yoga"
+  category: "Upper Body"
 },
 {
   name: "Murph",
   duration: 45,
-  category: "CrossTraining"
-}])
+  category: "Full Body"
+},
+{
+  name: "Pullup",
+  duration: 20,
+  category: "Bodyweight"
+},])
 puts "Creating #{Training.count} trainings"
+
+puts "creating Plans"
+Plan.create(name: "averroes", days: 7, category: categories.first)
+Plan.create(name: "ibnbatouta", days: 2, category: categories.first)
+
+puts "creating workout"
+Workout.create(plan: Plan.first, training: trainings.first)
+Workout.create(plan: Plan.first, training: trainings.last)
+puts "Terminé"
