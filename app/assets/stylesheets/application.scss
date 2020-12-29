@@ -7,7 +7,21 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "@splidejs/splide/dist/css/splide-core.min";
+
+
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap');
+
+
+.container {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+
+

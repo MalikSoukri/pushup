@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <div class="container">
+    <div class=""  data-controller="navbar">
+      <h1 class="text-center"> I&T<br> WORKOUT</h1> 
+      <h3></h2>
+      <%= link_to sweat_categories_path do  %>
+        <button type="submit" class="btn btn-flat buttonhome col text-center" data-navbar-target="home" data-action="click->navbar#clickedHome">DISCOVER NOW</button>
+      <% end %>
+    </div>
+  </div>
+</div>

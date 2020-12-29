@@ -1,0 +1,42 @@
+body {
+  margin-top: -10px;
+}
+.banner-sweat-category {
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  width: -webkit-fill-available; 
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://images.unsplash.com/photo-1434682881908-b43d0467b798?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1353&q=80);
+  background-repeat: no-repeat;
+  max-height: 70vh;
+  min-height: 70vh;
+}
+
+
+.banner-sweat-category h1 {
+  color: white;
+  font-family: Anton;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 53px;
+/* identical to box height */
+  letter-spacing: 0.21em;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+.backcolor {
+  min-height: 70vh;
+  background-color: rgba($color: #000000, $alpha: 0.9);
+  opacity: 0.95;
+  padding-bottom: 90px;
+}
