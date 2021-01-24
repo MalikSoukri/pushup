@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Destroyed existing"
+
 Profile.destroy_all
 User.destroy_all
 Workout.destroy_all
@@ -132,7 +133,7 @@ puts "Creating #{Training.count} trainings"
 
 
 
-puts "creating workout"
+puts "Creating Workouts"
 Workout.create(plan: Plan.first, training: kill_it)
 Workout.create(plan: Plan.first, training: murph)
 Workout.create(plan: Plan.first, training: boxing)
@@ -140,5 +141,7 @@ Workout.create(plan: Plan.first, training: booty)
 Workout.create(plan: Plan.first, training: back)
 Workout.create(plan: Plan.first, training: vinyassa)
 Workout.create(plan: Plan.first, training: rocket)
+
+puts "Creating #{Plan.count} plans"
 
 puts "Terminé"
