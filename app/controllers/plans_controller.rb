@@ -1,6 +1,6 @@
 class PlansController < ApplicationController
   def show
-    @plans = Training.all
-    @plan = Training.find(params[:id])
+    @plan = Plan.find(params[:id])
+    @trainings = Training.where(category: "Sweat")
   end
 end

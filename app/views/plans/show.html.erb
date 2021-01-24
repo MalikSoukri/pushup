@@ -1,0 +1,14 @@
+<div class="backcolor">
+  <div class="container plan">
+    <div class="plan-banner" style="background-image: url(<%= cl_image_path(@plan.photos.first.key)  %>);">
+      <h1 class="text-center">
+        <%= @plan.name %>
+      </h1> 
+    </div>
+      <h2 class="text-center">Description</h2> 
+      <div id="summary">
+        <p class="collapse mt-3 pt-2" id="collapseSummary">Lorem Ips</p>
+        <a class="collapsed" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
+      </div>
+    </div>
+</div>  
