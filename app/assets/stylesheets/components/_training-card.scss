@@ -1,6 +1,6 @@
 .training-card {
   overflow: hidden;
-  height: 150px;
+  height: 175px;
   background: white;
   border-radius: 0px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -53,14 +53,17 @@
   /* identical to box height */
     letter-spacing: 0.21em;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
     opacity: 0.9;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
   }
   i {
     color: white;
     margin-top: 0px;
     font-size: 25px;
     opacity: 0.9;
+  }
+  .small {
+    font-size: 16px;
   }
 }

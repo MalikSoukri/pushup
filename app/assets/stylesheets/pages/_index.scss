@@ -3,15 +3,7 @@
 @import "category_sweat";
 @import "category_flow";
 @import "plan_show";
-
-
-h2 {
-  color: white;
-  font-style: bold;
-  font-weight: normal;
-  font-size: 22px;
-}
-
+@import "training_show";
 h1 {
   color: white;
   font-family: Anton;
@@ -23,11 +15,18 @@ h1 {
   /* identical to box height */
 }
 
+h2 {
+  color: white;
+  font-style: bold;
+  font-weight: normal;
+  font-size: 22px;
+}
+
 p {
   color: white;
   font-family: "Nunito", "Helvetica", "sans-serif";
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 53px;
+  font-size: 14px;
+  line-height: 20px;
 }
