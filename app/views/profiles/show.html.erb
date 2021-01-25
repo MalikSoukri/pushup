@@ -1,0 +1,38 @@
+<div class="backcolor">
+  <div class="container plan">
+    <div class="d-flex justify-content-around">
+      <div class="avatar">
+        <%= cl_image_tag @profile.photo_url , {class: "avatar-large", alt: "avatar-large", gravity: :face} %>
+      </div>
+      <div>
+        <h1>Malik</h1>
+        <h2>Prenium</h2>
+        <h2 id="edit">Edit your profile</h2>
+      </div>
+    </div>
+      
+    <h2 class="mt-4">Description</h2> 
+    <div id="summary">
+      <p class="collapse mt-3 pt-2" id="collapseSummary">  Lorem ipsum dolor sit amet, consectetur adipisicing elit.Veritatis laboriosam mollitia autem at ab omnis iure quis asperiores inventore eos nam aut iusto officiis deserunt nihil, sequi tempore impedit quae?</p>
+      <a class="collapsed" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
+    </div>
+
+    <div class="d-flex justify-content-around mt-5">
+      <div class="profile-likes">
+        <p class="text-center">My Sweat<br>plans</p>
+      </div>
+      <div class="profile-likes">
+        <div class="icone d-flex justify-content-around">
+        <p class="text-center">My Flow<br>plans</p> 
+        </div>
+      </div>
+    </div>
+    <div class="">
+        <%= link_to new_training_path do  %>
+          <button type="submit" class="btn btn-flat mt-5 col text-center">ADD A WORKOUT</button>
+        <% end %>
+    </div>
+    
+
+  </div>
+</div>  
