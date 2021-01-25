@@ -1,9 +1,16 @@
 <div class="training-card mt-3" >
   <div class="info">
-    <h1>20'</h1>
-    <div class="icone d-flex justify-content-around">
+    <h1 class="">20'</h1>
+    <div class="icone d-flex justify-content-around ">
       <i class="fas fa-dumbbell"></i>
       <i class="fas fa-fire-alt"></i>
+    </div>
+    <div class="icone d-flex justify-content-around mt-4">
+      <p class="my-2 rounded">
+        <% training.intensity.times do %>
+          <i class="fas fa-fire-alt small"></i>
+        <% end %>
+      </p>
     </div>
   </div>
   <div class="main" style="background-image: url('<%= cl_image_path training.photos.first.key %>')">

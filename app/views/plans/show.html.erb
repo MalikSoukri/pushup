@@ -1,14 +1,23 @@
 <div class="backcolor">
   <div class="container plan">
     <div class="plan-banner" style="background-image: url(<%= cl_image_path(@plan.photos.first.key)  %>);">
-      <h1 class="text-center">
+      <h1 class="text-center title">
         <%= @plan.name %>
       </h1> 
     </div>
-      <h2 class="text-center">Description</h2> 
-      <div id="summary">
-        <p class="collapse mt-3 pt-2" id="collapseSummary">Lorem Ips</p>
-        <a class="collapsed" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
-      </div>
+    <h2 class="mt-4">Description</h2> 
+    <div id="summary">
+      <p class="collapse mt-3 pt-2" id="collapseSummary">  Lorem ipsum dolor sit amet, consectetur adipisicing elit.Veritatis laboriosam mollitia autem at ab omnis iure quis asperiores inventore eos nam aut iusto officiis deserunt nihil, sequi tempore impedit quae?</p>
+      <a class="collapsed" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
     </div>
+    <div>
+      <% @trainings.each_with_index do |training, index| %>
+        <%= link_to training_path(training) do %>
+          <%= render "trainings/trainings_card", training: training %>
+        <% end %>
+      <% end %>
+    </div>
+    
+    
+  </div>
 </div>  
