@@ -8,8 +8,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :trainings, only: [:index, :show]
+  resources :trainings, only: [:index, :show, :new, :create, :update]
   resources :plans, only: [:index, :show]
+  resources :profiles, only: [:show, :edit, :update]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

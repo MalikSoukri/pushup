@@ -1,10 +1,17 @@
 <div class="backcolor">
   <div class="container plan">
-    <div class="plan-banner" style="background-image: url(<%= cl_image_path(@training.photos.first.key)  %>);">
-      <h1 class="text-center title">
+  <% if @training.video.attached? %>
+      <div class="video-box">
+        <%= cl_video_tag @training.video_url , style: 'width:100%; height:auto;', controls: ''%>
+      </div>
+      <% else %>
+      <div class="video-box">
+        <%= cl_image_tag @training.photo_url , style: 'width:100%; height:auto;', controls: ''%>
+      </div>
+    <% end %>
+    <h1 class="text-center title">
         <%= @training.name %>
-      </h1> 
-    </div>
+    </h1> 
     <div class="d-flex justify-content-around">
       <div class="training-info">
         <h2>20'</h2>

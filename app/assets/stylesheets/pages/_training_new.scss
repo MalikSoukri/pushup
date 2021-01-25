@@ -1,0 +1,78 @@
+
+.form {
+  padding: 30px 15px 15px 15px;
+
+  color: white;
+  font-family: Anton;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.form-container {
+  margin-top: 20px;
+  max-width: 375px;
+}
+
+.category-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  flex: 0 0 30%;
+  padding-bottom: 20px;
+
+}
+
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+
+}
+
+
+.category-selector + label::after {
+  font-family: FontAwesome;
+  font-size: 40px;
+  color: #bb3c3c;
+  font-weight: normal;
+  font-style: normal;
+  display: block;
+  text-decoration: inherit;
+  position: absolute;
+  right: 25%;
+  width: 50px;
+  top: 25%;
+}
+
+.category-selector + label {
+  font-family: Anton;
+  color: #494848e5;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 12px;
+  padding: 10px 10px 30px 10px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  background-color: #ffffffb4;
+  position: relative;
+  height: 80px;
+}
+
+.form-check-label .collection_radio_buttons {
+  height:100px;
+}
+
+.category-selector:checked + label {
+  color: #000000 !important;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+}
+
+.category-item {
+  position: relative;
+}
