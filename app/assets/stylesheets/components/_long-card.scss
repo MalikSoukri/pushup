@@ -1,4 +1,4 @@
-.plan-card {
+.long-card {
   overflow: hidden;
   
   
@@ -13,14 +13,9 @@
   
 }
 
-.plan-card > img {
-  height: 180px;
-  width: 100%;
-  object-fit: cover;
-  opacity: 0.95;
-}
 
-.plan-card h2 {
+
+.long-card h2 {
   color: white;
   font-family: Anton;
   font-style: normal;
@@ -34,16 +29,9 @@
 
 }
 
-.plan-card p {
-  color: white;
-  font-size: 14px;
-  opacity: .7;
-  margin: 0;
-  padding: 5px;
-}
 
 
-.plan-card .plan-card-infos {
+.long-card .long-card-infos {
   // padding: 14px;
   display: flex;
   justify-content: space-between;
@@ -51,7 +39,7 @@
   position: relative;
 }
 
-.plan-card-infos .plan-card-user {
+.long-card-infos .long-card-user {
   position: absolute;
   right: 16px;
   top: -20px;

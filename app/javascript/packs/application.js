@@ -33,8 +33,18 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
 });
 
-import Splide from '@splidejs/splide';
-
-new Splide( '.pushsplide' ).mount();
 
 import "controllers"
+
+import Splide from '@splidejs/splide';
+
+
+new Splide( '.splide', {
+	type   : 'loop',
+  gap: '2rem',
+	padding: {
+		left : 0,
+		right: '10rem',
+	},
+  arrows: false,
+} ).mount();
