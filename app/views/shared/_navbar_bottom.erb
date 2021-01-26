@@ -18,11 +18,19 @@
         <% end %>
       </div>
     <% else %>
+      <% if current_user.nil?  %>
+        <div class="nav-item" >
+        <%=  link_to sweat_categories_path do %>
+          <i class="far fa-user" data-navbar-target="profile" data-action="click->navbar#clickedProfile"></i>
+          <% end %>
+        </div>
+      <% else %>
       <div class="nav-item" >
        <%=  link_to profile_path(current_user.profile) do %>
         <i class="far fa-user" data-navbar-target="profile" data-action="click->navbar#clickedProfile"></i>
         <% end %>
       </div>
+      <% end %>
     <% end %>
   </div>
 </div>

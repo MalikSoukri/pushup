@@ -65,7 +65,19 @@
       </a>
     </div>
 
-
+<div class="splide">
+	<div class="splide__track">
+		<ul class="splide__list">
+      <% @plans.each_with_index do |plan, index| %>
+			<li class="splide__slide" >
+            <%= link_to plan_path(plan) do %>
+              <%= render "plans/plans_long_card", plan: plan %>
+            <% end %>
+      </li>
+      <% end %>
+		</ul>
+	</div>
+</div>
 
 
   </div>
