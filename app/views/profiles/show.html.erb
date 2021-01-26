@@ -5,9 +5,12 @@
         <%= cl_image_tag @profile.photo_url , {class: "avatar-large", alt: "avatar-large", gravity: :face} %>
       </div>
       <div>
-        <h1>Malik</h1>
+        <h1><%= @profile.name %></h1>
         <h2>Prenium</h2>
-        <h2 id="edit">Edit your profile</h2>
+        <%= link_to edit_profile_path do  %>
+          <h2 id="edit">Edit your profile</h2>
+        <% end %>
+        
       </div>
     </div>
       

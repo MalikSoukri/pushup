@@ -16,4 +16,9 @@ class ProfilesController < ApplicationController
     redirect_to profile_path(@profile)
   end
 
+  private
+  def profile_params
+    params.require(:profile).permit(:name, :age, :description, :photo)
+  end
+
 end
