@@ -33,6 +33,9 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
 });
 
+//= require jquery
+//= require jquery_ujs
+
 
 import "controllers"
 

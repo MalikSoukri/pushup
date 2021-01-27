@@ -22,6 +22,17 @@
   padding-left: 30px !important;
   padding-right: 30px !important;
 }
-
+@media only screen and (max-width: 768px){
+  .brand-logo i{
+    transform: translateY(20px) !important;
+  }
+  .sidenav-trigger i{
+    transform: translateY(5px) !important;
+  }
+  .sidenav-overlay{
+    // display: none !important;
+    pointer-events: none;
+  }
+}
 
 
