@@ -32,7 +32,7 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'acts-as-taggable-on', '~> 7.0'
-
+gem 'rails_admin', '~> 2.0'
 gem 'devise'
 
 gem 'autoprefixer-rails'
