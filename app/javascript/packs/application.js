@@ -38,16 +38,3 @@ document.addEventListener('turbolinks:load', () => {
 
 
 import "controllers"
-
-import Splide from '@splidejs/splide';
-
-
-new Splide( '.splide', {
-	type   : 'loop',
-  gap: '2rem',
-	padding: {
-		left : 0,
-		right: '10rem',
-	},
-  arrows: false,
-} ).mount();

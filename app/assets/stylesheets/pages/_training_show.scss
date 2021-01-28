@@ -23,4 +23,22 @@
     margin-top: 35px;
     text-align: center;
   }
+  p {
+    margin-top: 35px;
+    text-align: center;
+  }
+
+}
+
+.video-box {
+    img {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+  }
+    video {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    }
 }

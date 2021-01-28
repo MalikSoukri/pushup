@@ -13,7 +13,17 @@ body {
   .plan {
     padding-top: 70px;
     .title {
-        padding-top: 15px;     
+      color: white;
+      font-family: Anton;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 5vw;
+      line-height: 0px;
+    /* identical to box height */
+      letter-spacing: 0.21em;
+      text-align: center;
+      position: relative;
+      bottom: -85%;
     }
 
   }
