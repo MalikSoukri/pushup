@@ -2,16 +2,14 @@
   height: 100vh;
 }
 .carousel{
- width: 100% !important;
- height: 80% !important;
+
  position: relative;
 //  background-color: blue;
 }
 
 .carousel-item{
   // background-color: white;
-  height: 60% !important;
-  width: 70% !important;
+
   background: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
   object-fit: cover;

@@ -2,32 +2,32 @@
   <div class="container px-3" data-controller="navbar">
     <div class="nav-item" >
      <%=  link_to sweat_categories_path do %>
-      <i class="fas fa-dumbbell" data-navbar-target="sweat" data-action="click->navbar#clickedSweat"></i>
+      <i class="fas fa-dumbbell" data-navbar-target="sweatbottom" data-action="click->navbar#clickedSweat"></i>
       <% end %>
     </div>
     <div class="nav-item" >
      <%=  link_to flow_categories_path do %>
-      <i class="fas fa-spa" data-navbar-target="flow" data-action="click->navbar#clickedFlow"></i>
+      <i class="fas fa-spa" data-navbar-target="flowbottom" data-action="click->navbar#clickedFlow"></i>
       <% end %>
     </div>
 
     <% if controller_name == "pages" && action_name == "account" %>
       <div class="nav-item" >
        <%=  link_to flow_categories_path do %>
-        <i class="fas fa-user" data-navbar-target="profile" data-action="click->navbar#clickedProfile"></i>
+        <i class="fas fa-user" data-navbar-target="profilebottom" data-action="click->navbar#clickedProfile"></i>
         <% end %>
       </div>
     <% else %>
       <% if current_user.nil?  %>
         <div class="nav-item" >
         <%=  link_to sweat_categories_path do %>
-          <i class="far fa-user" data-navbar-target="profile" data-action="click->navbar#clickedProfile"></i>
+          <i class="far fa-user" data-navbar-target="profilebottom" data-action="click->navbar#clickedProfile"></i>
           <% end %>
         </div>
       <% else %>
       <div class="nav-item" >
        <%=  link_to profile_path(current_user.profile) do %>
-        <i class="far fa-user" data-navbar-target="profile" data-action="click->navbar#clickedProfile"></i>
+        <i class="far fa-user" data-navbar-target="profilebottom" data-action="click->navbar#clickedProfile"></i>
         <% end %>
       </div>
       <% end %>

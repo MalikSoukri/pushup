@@ -4,12 +4,8 @@
     <title>Pushup</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -23,24 +19,5 @@
     <%= render 'shared/flashes' %>
     <%= yield %>
 
-    <script>
-      
-      document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.carousel');
-        if(elems){
-          var instances = M.Carousel.init(elems, {
-          });
-        }
-      });
-
-      document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems, {
-          draggable: true,
-          preventScrolling: true
-        });
-      });
-      
-    </script>
   </body>
 </html>

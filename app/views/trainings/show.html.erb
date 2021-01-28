@@ -2,11 +2,11 @@
   <div class="container plan">
   <% if @training.video.attached? %>
       <div class="video-box">
-        <%= cl_video_tag @training.video_url , style: 'width:100%; height:auto;', controls: ''%>
+        <%= cl_video_tag @training.video_url , controls: ''%>
       </div>
       <% else %>
       <div class="video-box">
-        <%= cl_image_tag @training.photo_url , style: 'width:100%; height:auto;', controls: ''%>
+        <%= cl_image_tag @training.photo_url%>
       </div>
     <% end %>
     <h1 class="text-center title">
@@ -17,9 +17,8 @@
         <h2><%= @training.duration %></h2>
       </div>
       <div class="training-info">
-        <div class="icone d-flex justify-content-around">
-          <i class="fas fa-dumbbell"></i>
-          <i class="fas fa-fire-alt"></i>
+        <div class="">
+          <p class=""><%= @training.tag_list %></p>
         </div>
       </div>
       <div class="training-info">
