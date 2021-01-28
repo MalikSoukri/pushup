@@ -10,16 +10,33 @@
       </div>
     </div>
   </div>
-  <div class="carousel-container">
-    <div class="carousel">
-    <% @trainings.each_with_index do |training, index| %>
-      <div class="carousel-item <%= 'active' if index == 0 %>" style="background-image: url('<%= cl_image_path training.photo_url %>')">
-        <h1><%= training.name.upcase  %></h1>
-      </p>
-      </div>
+
+
+  <div class="container my-5">   
+    <h2 class=""> Featured plans </h2> 
+    <div class="">
+      <% @plans.each_with_index do |plan, index| %>
+        <div>
+          <%= link_to plan_path(plan) do %>
+            <%= render "plans/plans_card", plan: plan %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <h2 class="mt-5"> Quick start </h2> 
+    <div class="mt-5">
+      <% @trainings.each_with_index do |training, index| %>
+        <div class="">
+        <%= link_to training_path(training) do %>
+          <%= render "trainings/trainings_card", training: training %>
+        <% end %>
+        </div>
       <% end %>
     </div>
   </div>
- 
+</div>
+
+
+
 </div>
 

@@ -10,61 +10,60 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = ["sweat", "flow", "profile", "home"];
+  static targets = ["sweatbottom", "flowbottom", "profilebottom", "homebottom"];
 
-  button_pressed = 'sweat';
+  button_pressed = 'sweatbottom';
 
   connect() {
     // this.reset_buttons(this.button_pressed);
     // this.reset_buttons();
     this.button_pressed = JSON.parse(localStorage.getItem('button_pressed'))
     console.log(this.button_pressed)
-    if( this.button_pressed == "sweat" ){
+    if( this.button_pressed == "sweatbottom" ){
       this.clickedSweat();
-    }else if ( this.button_pressed == "flow" ) {
+    }else if ( this.button_pressed == "flowbottom" ) {
       this.clickedFlow();
-    }else if ( this.button_pressed == "profile" ) {
+    }else if ( this.button_pressed == "profilebottom" ) {
       this.clickedProfile();
-    }else if ( this.button_pressed == "home" ) {
+    }else if ( this.button_pressed == "homebottom" ) {
       this.clickedSweat();
     }
     }
 
   reset_buttons(){
     console.log("reset")
-    this.sweatTarget.classList.remove("text-danger");
-    this.flowTarget.classList.remove("text-danger");
-    this.profileTarget.classList.remove("text-danger");
+    this.sweatbottomTarget.classList.remove("text-danger");
+    this.flowbottomTarget.classList.remove("text-danger");
+    this.profilebottomTarget.classList.remove("text-danger");
   }
 
 
-  voted(button){
+  choose(button){
     window.localStorage.setItem('button_pressed', JSON.stringify(button))
   }
 
   clickedSweat() {
     console.log("got in the code")
-    this.flowTarget.classList.add("text-muted");
-    this.profileTarget.classList.add("text-muted");
-
-    this.voted("sweat");
+    this.flowbottomTarget.classList.add("text-muted");
+    this.profilebottomTarget.classList.add("text-muted");
+    this.choose("sweatbottom");
   }
   
   clickedFlow() {
-    this.sweatTarget.classList.add("text-muted");
-    this.profileTarget.classList.add("text-muted");
-    this.voted("flow");
+    this.sweatbottomTarget.classList.add("text-muted");
+    this.profilebottomTarget.classList.add("text-muted");
+    this.choose("flowbottom");
   }
 
   clickedProfile() {
-    this.sweatTarget.classList.add("text-muted");
-    this.flowTarget.classList.add("text-muted");
-    this.voted("profile");
+    this.sweatbottomTarget.classList.add("text-muted");
+    this.flowbottomTarget.classList.add("text-muted");
+    this.choose("profilebottom");
   }
   
   clickedHome () {
     console.log("got in the home function");
-    this.voted("sweat");
+    this.choose("sweatbottom");
   }
 
   
