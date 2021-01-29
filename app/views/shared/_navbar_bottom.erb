@@ -20,7 +20,7 @@
     <% else %>
       <% if current_user.nil?  %>
         <div class="nav-item" >
-        <%=  link_to sweat_categories_path do %>
+        <%=  link_to user_session_path do %>
           <i class="far fa-user" data-navbar-target="profilebottom" data-action="click->navbar#clickedProfile"></i>
           <% end %>
         </div>

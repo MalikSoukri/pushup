@@ -11,7 +11,11 @@ Rails.application.routes.draw do
 
   resources :trainings, only: [:index, :show, :new, :create, :update]
   resources :plans, only: [:index, :show]
-  resources :profiles, only: [:show, :edit, :update]
+  resources :profiles, only: [:show, :edit, :update] do
+    collection do
+      get :account
+    end
+  end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

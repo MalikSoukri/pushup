@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :sweat, :flow]
   def sweat
     @categories = Category.all
     @sweat = Category.where(name: "Sweat").first
