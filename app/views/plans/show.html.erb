@@ -11,7 +11,8 @@
       <a class="collapsed" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
     </div>
     <div>
-      <% @trainings.each_with_index do |training, index| %>
+      <% @workouts.each_with_index do |workout, index| %>
+        <%= training = workout.training %>
         <%= link_to training_path(training) do %>
           <%= render "trainings/trainings_card", training: training %>
         <% end %>

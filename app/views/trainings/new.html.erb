@@ -9,6 +9,10 @@
           <%= f.input :duration, :label => "What's the duration?" %>
           <%= f.input :category, collection: ["Sweat", "Flow"] %>
           <%# <%= f.input :rating, collection: 1..5, as: :radio_buttons %>
+          <%# <%= f.association :plan %> 
+          <%= f.association :plans 
+          %>
+          <%=  %>
 
           <%= f.input :cat_list, as: :radio_buttons,
               collection_wrapper_tag: 'div',

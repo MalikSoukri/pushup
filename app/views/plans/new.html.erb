@@ -1,0 +1,25 @@
+<div class="backcolor">
+  <div class="container plan">
+    
+    
+<%= simple_form_for @plan do |f| %>
+      <div class="form container">
+        <div class="form-inputs">
+          <%= f.input :name, :label => "What's your plan name?" %>
+          <%= f.input :days, :label => "What's the duration?" %>
+          <%= f.association :category%>
+          <div class="">
+            <%= f.input :photos, as: :file,
+              label: '📷    Workout picture',
+              as: :file %>
+          </div>
+          <div class="my-3" id="results">
+            <%="Note: After clicking 'create', your workout will be added" %>
+          </div>
+        </div>
+      </div>
+      <%= f.submit "Create",  class:"btn btn-flat mt-5 col text-center" %>
+    <% end %>
+
+  </div>
+</div>  

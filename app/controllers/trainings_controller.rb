@@ -7,10 +7,16 @@ class TrainingsController < ApplicationController
 
   def new
     @training = Training.new
+    @plans = Plan.all
   end
 
   def create
     @training = Training.new(training_params)
+    @workout = Workout.new
+    @plan = Plan.find(params[:training][:plan_ids][1])
+    @plan.workout@workout = Workout.new
+    @training.workouts.last = @workout
+    @training.workouts = @plan
     if @training.save
       redirect_to training_path(@training)
     else
