@@ -8,9 +8,9 @@ Rails.application.routes.draw do
       get :flow
     end
   end
-
+  
   resources :trainings, only: [:index, :show, :new, :create, :update]
-  resources :plans, only: [:index, :show]
+  resources :plans, only: [:index, :show, :new, :create, :update]
   resources :profiles, only: [:show, :edit, :update] do
     collection do
       get :account

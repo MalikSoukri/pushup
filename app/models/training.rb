@@ -2,7 +2,7 @@ class Training < ApplicationRecord
   has_many :sessions
   has_many :likes
   has_many :workouts
-  has_many :plans
+  has_many :plans, through: :workouts
   has_many_attached :photos
   has_one_attached :video
   acts_as_taggable_on :tags
